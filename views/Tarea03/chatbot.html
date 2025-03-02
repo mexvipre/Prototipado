@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Watson</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            text-align: center;
+            background: white;
+
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bienvenido al Chatbot Turístico de Ica</h1>
+        <p>Este chatbot para brindarte información detallada sobre los principales atractivos turísticos de la región de Ica. Desde las imponentes dunas de Huacachina hasta las enigmáticas Líneas de Nazca, este asistente virtual te guiará de manera interactiva a través de botones de selección, permitiéndote explorar cada destino y obtener detalles adicionales sobre su historia, ubicación y principales actividades.</p>
+    
+        <p>El chatbot ha sido integrado con IBM Watson Assistant, utilizando inteligencia artificial para responder de manera precisa a tus consultas sobre los lugares turísticos más emblemáticos de Ica.</p>
+    
+        <p>Para comenzar, haz clic en el botón del chatbot y descubre todo lo que Ica tiene para ofrecer.</p>
+    </div>
+    
+    
+
+    <script>
+        window.watsonAssistantChatOptions = {
+            integrationID: "8672f30d-a1d3-4338-ae70-fec55f9e3f70", // The ID of this integration.
+            region: "au-syd", // The region your integration is hosted in.
+            serviceInstanceID: "80ef27a2-ad64-4257-828d-e25bf00d164d", // The ID of your service instance.
+            onLoad: async (instance) => { await instance.render(); }
+        };
+        setTimeout(function(){
+            const t = document.createElement('script');
+            t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+            document.head.appendChild(t);
+        });
+    </script>
+</body>
+</html>

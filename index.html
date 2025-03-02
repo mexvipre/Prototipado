@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sidebar" id="sidebar">
+        <h2>Dashboard</h2>
+
+        <div class="dropdown">
+            <button class="dropdown-btn">Tarea 01</button>
+            <div class="dropdown-content">
+                <button onclick="cargarVista('views/Tarea01/index.html')">Ejercicio 1</button>
+                <button onclick="cargarVista('views/Tarea01/index2.html')">Ejercicio 2</button>
+                <button onclick="cargarVista('views/Tarea01/index3.html')">Ejercicio 3</button>
+            </div>
+        </div>
+        
+        <div class="dropdown">
+            <button class="dropdown-btn">Tarea 02</button>
+            <div class="dropdown-content">
+                <button onclick="cargarVista('views/Tarea02/test1.html')">Ejercicio 1</button>
+            </div>
+        </div>
+        
+        <div class="dropdown">
+            <button class="dropdown-btn">Tarea 03</button>
+            <div class="dropdown-content">
+                <button onclick="cargarVista('views/Tarea03/Chatbot.html')">Ejercicio 1</button>
+
+            </div>
+        </div>
+        
+
+    </div>
+
+    <div class="main-content">
+        <header>
+            <button id="toggleSidebar">☰</button>
+            <h1>Alumno Max Rojas Huarcaya</h1>
+        </header>
+        <section id="vista-container">
+            <!-- Aquí se cargarán las vistas dinámicamente -->
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
