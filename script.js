@@ -16,3 +16,7 @@ document.querySelectorAll(".dropdown-btn").forEach(button => {
         dropdownContent.style.display = (dropdownContent.style.display === "block") ? "none" : "block";
     });
 });
+
+document.getElementById("toggleSidebar").addEventListener("click", function() {
+    document.querySelector(".sidebar").classList.toggle("hidden");
+});

@@ -154,3 +154,43 @@ body {
     height: 100%;
     border: none; /* Quita los bordes del iframe */
 }
+
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        border-right: none;
+        border-bottom: 2px solid #ddd;
+        display: none;
+    }
+
+    .sidebar button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+        padding: 15px;
+    }
+
+    #toggleSidebar {
+        display: block;
+    }
+
+    .widgets {
+        flex-direction: column;
+    }
+
+    .widget {
+        width: 100%;
+    }
+}
